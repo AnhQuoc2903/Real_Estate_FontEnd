@@ -1,56 +1,108 @@
-import React from 'react';
-import './NewsSection.css';
-
-// Dữ liệu mẫu cho các bài tin tức
-const newsData = [
-    {
-        image: '/images/news/villa-1.jpg',
-        title: 'HDAMC Hội thảo cập nhật quy định pháp luật mới',
-        excerpt: 'HDAMC Hội thảo cập nhật quy định pháp luật mới',
-        link: '/tin-tuc/bai-viet-1'
-    },
-    {
-        image: '/images/news/villa-1.jpg',
-        title: 'TRAO TẶNG HỌC BỔNG "QUỸ PHÚC TÂM" CHO HỌC SINH CÓ HOÀN CẢNH KHÓ KHĂN',
-        excerpt: 'Trao tặng học bổng "Quỹ Phúc Tâm" cho học sinh có hoàn cảnh khó khăn',
-        link: '/tin-tuc/bai-viet-2'
-    },
-    {
-        image: '/images/news/villa-1.jpg',
-        title: 'TIẾN LÊN VÀ ĐẬP LƯỚI: SỨC HÚT CỦA PICKLEBALL',
-        excerpt: 'TIẾN LÊN VÀ ĐẬP LƯỚI: SỨC HÚT CỦA PICKLEBALL',
-        link: '/tin-tuc/bai-viet-3'
-    },
-    {
-        image: '/images/news/villa-1.jpg', // Thêm bài viết thứ 4
-        title: 'HOẠT ĐỘNG THIỆN NGUYỆN TẠI MÁI ẤM TÌNH THƯƠNG',
-        excerpt: 'Chung tay mang đến niềm vui và sự ấm áp cho các em nhỏ tại mái ấm tình thương.',
-        link: '/tin-tuc/bai-viet-4'
-    }
-];
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "./NewsSection.css";
 
 const NewsSection = () => {
-    return (
-        <section className="news-section">
-            <div className="container">
-                <h2 className="news-section-title">TIN TỨC</h2>
-                <div className="news-grid">
-                    {newsData.map((article, index) => (
-                        <div key={index} className="news-card">
-                            <img src={article.image} alt={article.title} className="news-card-image" />
-                            <div className="news-card-content">
-                                <h3>{article.title}</h3>
-                                <p>{article.excerpt}</p>
-                                <a href={article.link} className="news-read-more">
-                                    Đọc tiếp →
-                                </a>
-                            </div>
-                        </div>
-                    ))}
+  const [activeTab, setActiveTab] = useState("community");
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const API_BASE_URL =
+    process.env.REACT_APP_API_URL ||
+    (window.location.hostname === "localhost"
+      ? "http://localhost:5000"
+      : "https://YOUR-BACKEND-DOMAIN");
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      setLoading(true);
+      try {
+        const res = await axios.get(
+          `${API_BASE_URL}/api/posts?category=${activeTab}&limit=4`,
+        );
+        setPosts(res.data);
+      } catch (err) {
+        console.error("Lỗi tải tin tức:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, [API_BASE_URL, activeTab]);
+
+  return (
+    <section className="news-section">
+      <div className="container">
+        <h2 className="news-section-title">TIN TỨC</h2>
+
+        {/* ===== TAB NAVIGATION ===== */}
+        <div className="news-tab-navigation">
+          <button
+            className={`news-tab-link ${
+              activeTab === "community" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("community")}
+          >
+            👥 HOẠT ĐỘNG CỘNG ĐỒNG
+          </button>
+
+          <button
+            className={`news-tab-link ${
+              activeTab === "market" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("market")}
+          >
+            🏆 TIN THỊ TRƯỜNG
+          </button>
+
+          <button
+            className={`news-tab-link ${
+              activeTab === "internal" ? "active" : ""
+            }`}
+            onClick={() => setActiveTab("internal")}
+          >
+            📄 TIN NỘI BỘ
+          </button>
+        </div>
+
+        {/* ===== CONTENT ===== */}
+        {loading ? (
+          <p>Đang tải tin tức...</p>
+        ) : (
+          <div className="news-grid">
+            {posts.map((post) => (
+              <div key={post._id} className="news-card">
+                <img
+                  src={
+                    post.featuredImage?.startsWith("http")
+                      ? post.featuredImage
+                      : `${API_BASE_URL}${post.featuredImage}`
+                  }
+                  alt={post.title}
+                  className="news-card-image"
+                />
+
+                <div className="news-card-content">
+                  <h3>{post.title}</h3>
+
+                  <p>
+                    {post.content?.replace(/<[^>]+>/g, "").substring(0, 100)}
+                    ...
+                  </p>
+
+                  <Link to={`/tin-tuc/${post.slug}`} className="news-read-more">
+                    Đọc tiếp →
+                  </Link>
                 </div>
-            </div>
-        </section>
-    );
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default NewsSection;
