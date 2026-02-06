@@ -29,7 +29,7 @@ const InternalNews = () => {
     };
 
     fetchPosts();
-  }, []); // Mảng rỗng [] đảm bảo hàm chỉ chạy 1 lần khi component được render
+  }, [API_BASE_URL]); // Mảng rỗng [] đảm bảo hàm chỉ chạy 1 lần khi component được render
 
   if (loading) return <p>Đang tải tin nội bộ...</p>;
   if (error) return <p style={{ color: "red" }}>{error}</p>;
