@@ -1,0 +1,120 @@
+.services-section-container {
+    padding: 80px 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.services-section-container .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.services-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Tạo layout 4 cột */
+    gap: 30px; /* Khoảng cách giữa các cột */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 992px) {
+    .services-grid-layout {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid-layout {
+        grid-template-columns: 1fr; /* 1 cột trên mobile */
+    }
+}
+
+.service-card-item {
+    text-align: left;
+}
+
+.service-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    aspect-ratio: 4 / 3; /* Giữ tỉ lệ ảnh */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung */
+}
+
+.service-content-wrapper h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-content-wrapper p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.learn-more-link {
+    color: #c80000; /* Màu tím/đỏ như trong ảnh */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+    text-decoration: underline;
+    color: #a00000;
+}
+
+/* ... các CSS khác giữ nguyên ... */
+
+.service-card-item {
+    text-align: left;
+    background-color: #fff; /* Thêm màu nền trắng */
+    padding: 25px; /* Thêm padding */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Thêm bóng đổ nhẹ ban đầu */
+    
+    /* Đây là key: Thêm hiệu ứng chuyển động mượt mà */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* HIỆU ỨNG KHI HOVER: */
+.service-card-item:hover {
+    /* Nâng card lên một chút */
+    transform: translateY(-10px);
+    /* Tăng độ đậm và lan tỏa của bóng đổ */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-content-wrapper h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* ... các CSS khác giữ nguyên ... */

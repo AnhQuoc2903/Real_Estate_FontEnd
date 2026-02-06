@@ -1,0 +1,119 @@
+/* -- Tổng thể cho thanh header -- */
+.app-header {
+    background-color: #ffffff; /* Nền trắng */
+    padding: 15px 0;
+    border-bottom: 1px solid #e7e7e7; /* Đường viền mỏng bên dưới */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky; /* Giữ header ở trên cùng khi cuộn */
+    top: 0;
+    z-index: 1000;
+}
+
+/* -- Container để căn giữa nội dung và tạo layout -- */
+.app-header .container {
+    max-width: 1200px; /* Chiều rộng tối đa của nội dung */
+    margin: 0 auto; /* Tự động căn giữa */
+    padding: 0 20px; /* Khoảng cách hai bên */
+    display: flex; /* Sử dụng Flexbox để xếp logo và nav */
+    justify-content: space-between; /* Đẩy logo và nav ra hai phía */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* -- Định dạng cho Logo -- */
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+/* -- Định dạng cho thanh điều hướng (Navigation) -- */
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Bỏ dấu chấm đầu dòng của danh sách */
+    display: flex; /* Xếp các mục menu nằm ngang */
+}
+
+.main-nav li {
+    margin-left: 25px; /* Khoảng cách giữa các mục menu */
+}
+
+.main-nav a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    text-decoration: none;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* -- Hiệu ứng khi di chuột qua link -- */
+.main-nav a:hover {
+    color: #007bff; /* Đổi màu chữ khi hover */
+}
+
+/* -- Thêm gạch chân khi hover -- */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* ================== RESPONSIVE MOBILE ================== */
+.menu-toggle {
+    display: none; /* Ẩn mặc định */
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    /* Nút ☰ hiện khi mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ẩn menu ngang mặc định */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        border-top: 1px solid #e7e7e7;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Khi có class .open thì hiện menu */
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .main-nav li {
+        margin: 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 12px 20px;
+    }
+}

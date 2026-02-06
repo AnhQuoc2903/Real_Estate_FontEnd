@@ -1,0 +1,152 @@
+.about-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    /* Thêm background pattern chấm bi */
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    background-size: 15px 15px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Khoảng cách giữa 2 cột */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column; /* Xếp chồng 2 cột trên màn hình nhỏ */
+    }
+}
+
+/* -- Cột hình ảnh bên trái -- */
+.about-image-column {
+    flex: 1; /* Chiếm 50% chiều rộng */
+}
+
+.about-image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Bo góc nhẹ cho ảnh */
+}
+
+/* -- Cột nội dung bên phải -- */
+.about-content-column {
+    flex: 1; /* Chiếm 50% chiều rộng */
+    padding-left: 20px;
+}
+
+.about-content-column .section-subtitle {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.about-content-column .section-title {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* -- Định dạng cho các nút Tab -- */
+.about-tabs {
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 12px 30px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.tab-button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.tab-button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none; /* Bỏ đường viền trái của nút thứ 2 */
+}
+
+/* -- Định dạng cho tab đang active -- */
+.tab-button.active {
+    background-color: #343a40; /* Màu nền đen/xám đậm */
+    color: #fff;
+    border-color: #343a40;
+}
+
+/* -- Nội dung của Tab -- */
+.tab-content {
+    min-height: 120px; /* Đảm bảo chiều cao không đổi khi chuyển tab */
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.read-more-link {
+    color: #007bff; /* Màu xanh dương cho link */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* ... các CSS đã có ... */
+
+/* 1. Định nghĩa các keyframes cho animation */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px); /* Bắt đầu từ bên trái 50px */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Kết thúc ở vị trí ban đầu */
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px); /* Bắt đầu từ bên phải 50px */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Kết thúc ở vị trí ban đầu */
+    }
+}
+
+/* 2. Tạo các class để áp dụng animation */
+/* Mặc định, các cột sẽ bị ẩn đi */
+.about-image-column,
+.about-content-column {
+    opacity: 0; /* Ẩn đi cho đến khi được kích hoạt */
+}
+
+/* Class 'visible' sẽ được thêm vào bằng React khi section xuất hiện */
+.about-image-column.visible {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.about-content-column.visible {
+    animation: slideInFromRight 1s ease-out forwards;
+}

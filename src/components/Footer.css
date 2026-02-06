@@ -1,0 +1,88 @@
+/* -- Tổng thể cho footer -- */
+.app-footer {
+    background-color: #343a40; /* Nền tối */
+    color: #a9a9a9; /* Chữ màu xám nhạt */
+    padding-top: 40px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các cột xuống hàng trên màn hình nhỏ */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1; /* Chia đều không gian */
+    padding: 20px;
+    min-width: 250px; /* Chiều rộng tối thiểu cho mỗi cột */
+}
+
+/* -- Cột Giới thiệu -- */
+.footer-section.about h2 {
+    color: #ffffff;
+}
+
+.footer-section.about .socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #4e555b;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.footer-section.about .socials a:hover {
+    background-color: #007bff;
+}
+
+
+/* -- Cột Liên kết & Liên hệ -- */
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #a9a9a9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section.links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-section.contact-form span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* -- Thanh bản quyền dưới cùng -- */
+.footer-bottom {
+    background-color: #23272b;
+    color: #6c757d;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 40px;
+}

@@ -1,0 +1,55 @@
+.services-page {
+    width: 100%;
+}
+
+.services-tab-navigation {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa; /* Màu nền xám nhạt */
+}
+
+.services-tab-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.service-tab-link {
+    flex: 1; /* Chia đều không gian cho các tab */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 25px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-tab-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.service-tab-link.active {
+    color: #0d6efd;
+    border-bottom-color: #0d6efd;
+}
+
+.service-tab-link:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+.service-tab-content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}

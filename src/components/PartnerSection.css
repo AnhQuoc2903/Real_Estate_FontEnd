@@ -1,0 +1,65 @@
+.partner-section {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.partner-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.logo-scroller-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Đây là key: ẩn đi phần logo thừa */
+    /* Tạo hiệu ứng mờ dần ở 2 cạnh để dải logo xuất hiện và biến mất mượt mà hơn */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* Định nghĩa animation trôi từ phải sang trái */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Di chuyển sang trái đúng bằng một nửa chiều dài của dải logo */
+        transform: translateX(-50%);
+    }
+}
+
+.logo-scroller {
+    display: flex;
+    width: max-content; /* Đảm bảo tất cả logo nằm trên một hàng */
+    /* Áp dụng animation */
+    animation: scroll 30s linear infinite;
+    /* Bạn có thể thay đổi 30s để điều chỉnh tốc độ */
+}
+
+.logo-scroller:hover {
+    /* Tạm dừng animation khi di chuột vào */
+    animation-play-state: paused;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px; /* Khoảng cách giữa các logo */
+}
+
+.logo-item img {
+    height: 60px; /* Điều chỉnh chiều cao của logo */
+    max-width: 150px;
+    filter: grayscale(100%); /* Chuyển logo sang màu xám */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.logo-item img:hover {
+    filter: grayscale(0%); /* Hiện lại màu gốc khi di chuột */
+    opacity: 1;
+    transform: scale(1.1);
+}

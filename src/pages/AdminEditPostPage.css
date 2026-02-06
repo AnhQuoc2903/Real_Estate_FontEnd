@@ -1,0 +1,13 @@
+/* Có thể import file AdminCreatePostPage.css và thêm các style dưới đây */
+@import './AdminCreatePostPage.css';
+
+.admin-page-container.admin-edit-page-wide {
+    max-width: 1100px; /* Tăng chiều rộng tối đa */
+}
+.current-image-preview {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

@@ -1,0 +1,43 @@
+.tiptap-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.editor-menu-bar {
+    background-color: #f1f1f1;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.editor-menu-bar button {
+    background: none;
+    border: none;
+    padding: 6px 10px;
+    margin-right: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.editor-menu-bar button:hover {
+    background-color: #e0e0e0;
+}
+
+.editor-menu-bar button.is-active {
+    background-color: #d0d0d0;
+    font-weight: bold;
+}
+
+.ProseMirror {
+    padding: 15px;
+    min-height: 250px;
+    outline: none;
+}
+
+/* Định dạng cho nội dung bên trong editor */
+.ProseMirror h1 {
+    font-size: 2em;
+}
+.ProseMirror h2 {
+    font-size: 1.5em;
+}

@@ -1,0 +1,52 @@
+.recruitment-page {
+    padding: 60px 0;
+}
+.recruitment-page .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.recruitment-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.job-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.job-card-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+.job-card-info p {
+    margin: 5px 0;
+    color: #666;
+}
+.job-card-link {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.job-card-link:hover {
+    background-color: #0056b3;
+}

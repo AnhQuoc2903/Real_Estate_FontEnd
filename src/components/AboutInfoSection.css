@@ -1,0 +1,99 @@
+.about-info-section {
+    padding: 80px 0;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.about-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center; /* Căn giữa các cột theo chiều dọc */
+    gap: 60px; /* Khoảng cách giữa 2 cột */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 992px) {
+    .about-info-container {
+        flex-direction: column-reverse; /* Đảo ngược thứ tự, đưa ảnh lên trên */
+        gap: 40px;
+    }
+}
+
+/* -- Cột nội dung bên trái -- */
+.about-text-content {
+    flex: 1; /* Chiếm 50% không gian */
+}
+
+.about-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.about-text-content p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* -- Cột hình ảnh bên phải -- */
+.about-image-content {
+    flex: 1; /* Chiếm 50% không gian */
+}
+
+.about-image-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Có thể thêm border-radius nếu muốn bo góc */
+}
+
+/* ... các CSS đã có cho about-info-section ... */
+
+/* 1. Định nghĩa animation (có thể sao chép từ file AboutSection.css) */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 2. Tạo các class để áp dụng animation */
+/* Mặc định, ẩn các cột đi */
+.about-text-content,
+.about-image-content {
+    opacity: 0;
+}
+
+/* Class 'visible' sẽ được thêm vào khi section xuất hiện */
+.about-text-content.visible {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.about-image-content.visible {
+    animation: slideInFromRight 1s ease-out forwards;
+}

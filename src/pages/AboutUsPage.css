@@ -1,0 +1,52 @@
+.about-us-page {
+    width: 100%;
+}
+
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+    width: 100%;
+}
+
+.tab-container {
+    display: flex;
+}
+
+.tab-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Khoảng cách giữa icon và text */
+    padding: 20px 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid transparent; /* Viền dưới trong suốt mặc định */
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.tab-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* Định dạng cho tab đang được chọn */
+.tab-link.active {
+    color: #0d6efd; /* Màu xanh dương cho text */
+    border-bottom-color: #0d6efd; /* Hiện viền dưới màu xanh */
+}
+
+.tab-link:hover:not(.active) {
+    color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+.tab-content-area {
+    padding-top: 1px;
+}

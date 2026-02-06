@@ -1,0 +1,28 @@
+.language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.language-switcher button:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+
+/* Định dạng cho nút đang được chọn (bị vô hiệu hóa) */
+.language-switcher button:disabled {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    cursor: default;
+}

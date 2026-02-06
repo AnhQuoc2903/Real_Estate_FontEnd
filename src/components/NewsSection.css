@@ -1,0 +1,106 @@
+.news-section {
+    padding: 80px 0;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.news-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.news-section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.news-grid {
+    display: grid;
+    /* Yêu cầu của bạn: tạo layout 4 cột */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Responsive cho các màn hình khác nhau */
+@media (max-width: 1200px) {
+    .news-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.news-card {
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.news-card-image {
+    width: 100%;
+    height: 200px; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh vừa vặn mà không bị méo */
+    display: block;
+}
+
+.news-card-content {
+    padding: 20px;
+}
+
+.news-card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px 0;
+    /* Giới hạn số dòng cho tiêu đề để tránh vỡ layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 44px; /* 2 dòng x 22px line-height */
+}
+
+.news-card-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    /* Giới hạn số dòng cho mô tả */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 72px; /* 3 dòng x 24px line-height */
+}
+
+.news-read-more {
+    color: #c80000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.news-read-more:hover {
+    text-decoration: underline;
+}

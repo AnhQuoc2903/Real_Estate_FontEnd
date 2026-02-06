@@ -1,0 +1,50 @@
+.featured-properties {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.featured-properties .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.featured-properties h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.property-card-featured {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.property-card-featured:hover {
+    transform: translateY(-10px);
+}
+
+.property-card-featured .card-content {
+    padding: 20px;
+}
+
+.property-card-featured h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.property-card-featured .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}

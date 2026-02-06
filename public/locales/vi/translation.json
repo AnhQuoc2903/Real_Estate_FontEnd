@@ -1,0 +1,56 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "services": "Lĩnh vực hoạt động",
+    "exchange": "Sàn giao dịch",
+    "news": "Tin tức",
+    "recruitment": "Tuyển dụng",
+    "contact": "Liên hệ"
+  },
+  "footer": {
+    "company_name": "TÊN CÔNG TY BĐS",
+    "description": "Với kinh nghiệm nhiều năm trong lĩnh vực bất động sản, chúng tôi cam kết mang đến cho khách hàng những sản phẩm và dịch vụ tốt nhất.",
+    "quick_links": "Liên kết nhanh",
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật",
+    "contact_us": "Liên hệ",
+    "copyright": "Đã đăng ký bản quyền"
+  },
+  "language_switcher": {
+    "vietnamese": "Tiếng Việt",
+    "english": "English"
+  },
+  "properties_page": {
+    "title": "Danh sách Bất động sản",
+    "loading": "Đang tải dữ liệu...",
+    "error": "Không thể tải dữ liệu từ server.",
+    "price": "Giá",
+    "area": "Diện tích",
+    "address": "Địa chỉ"
+  },
+  "services": {
+    "title": "Dịch vụ của chúng tôi",
+    "subtitle": "Chúng tôi cung cấp các giải pháp bất động sản toàn diện và chuyên nghiệp.",
+    "item1_title": "Tư vấn chuyên sâu",
+    "item1_desc": "Đội ngũ chuyên gia của chúng tôi sẵn sàng cung cấp các phân tích và lời khuyên đầu tư chính xác nhất.",
+    "item2_title": "Ký gửi Mua & Bán",
+    "item2_desc": "Hỗ trợ khách hàng trong toàn bộ quá trình mua, bán và cho thuê bất động sản một cách nhanh chóng.",
+    "item3_title": "Hỗ trợ pháp lý",
+    "item3_desc": "Đảm bảo mọi giao dịch đều an toàn, minh bạch và tuân thủ đúng các quy định của pháp luật."
+  },
+  "cta": {
+    "title": "Bạn đã sẵn sàng tìm kiếm ngôi nhà cho riêng mình?",
+    "subtitle": "Hãy để lại thông tin, đội ngũ chuyên viên của chúng tôi sẽ liên hệ với bạn ngay.",
+    "button": "Liên hệ ngay"
+  },
+  "hero": {
+    "title": "Tìm kiếm ngôi nhà mơ ước của bạn",
+    "subtitle": "Nền tảng bất động sản hàng đầu Việt Nam",
+    "search_placeholder": "Nhập địa điểm, dự án...",
+    "search_button": "Tìm kiếm"
+  },
+  "featured": {
+    "title": "Bất động sản nổi bật"
+  }
+}

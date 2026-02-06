@@ -1,0 +1,56 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "exchange": "Exchange",
+    "news": "News",
+    "recruitment": "Recruitment",
+    "contact": "Contact"
+  },
+  "footer": {
+    "company_name": "REAL ESTATE COMPANY NAME",
+    "description": "With many years of experience in the real estate field, we are committed to providing our customers with the best products and services.",
+    "quick_links": "Quick Links",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact_us": "Contact Us",
+    "copyright": "All rights reserved"
+  },
+  "language_switcher": {
+    "vietnamese": "Tiếng Việt",
+    "english": "English"
+  },
+  "properties_page": {
+    "title": "Property List",
+    "loading": "Loading data...",
+    "error": "Could not load data from the server.",
+    "price": "Price",
+    "area": "Area",
+    "address": "Address"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We provide comprehensive and professional real estate solutions.",
+    "item1_title": "Expert Consulting",
+    "item1_desc": "Our team of experts is ready to provide the most accurate investment analysis and advice.",
+    "item2_title": "Brokerage Services",
+    "item2_desc": "Assisting clients throughout the entire process of buying, selling, and leasing properties quickly.",
+    "item3_title": "Legal Support",
+    "item3_desc": "Ensuring all transactions are secure, transparent, and in compliance with legal regulations."
+  },
+  "cta": {
+    "title": "Ready to find your own home?",
+    "subtitle": "Leave your information and our team of specialists will contact you shortly.",
+    "button": "Contact Us Now"
+  },
+  "hero": {
+    "title": "Find Your Dream Home",
+    "subtitle": "The leading real estate platform in Vietnam",
+    "search_placeholder": "Enter location, project...",
+    "search_button": "Search"
+  },
+  "featured": {
+    "title": "Featured Properties"
+  }
+}
