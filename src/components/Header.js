@@ -41,9 +41,6 @@ const Header = () => {
             <li>
               <Link to="/lien-he">{t("header.contact")}</Link>
             </li>
-            <li>
-              <Link to="/login">{t("header.login")}</Link>
-            </li>
           </ul>
         </nav>
       </div>

@@ -49,6 +49,8 @@ function App() {
       <Routes>
         {/* Route cho trang đăng nhập (layout riêng, không có Header/Footer) */}
 
+        <Route path="/login" element={<LoginPage />} />
+
         {/* Route cho khu vực Admin, được bảo vệ và sử dụng AdminLayout */}
         <Route element={<ProtectedRoute />}>
           <Route path="/admin" element={<AdminLayout />}>
@@ -73,7 +75,6 @@ function App() {
           <Route path="tuyen-dung" element={<RecruitmentPage />} />
           <Route path="tuyen-dung/:slug" element={<JobDetailPage />} />
           <Route path="lien-he" element={<ContactPage />} />
-          <Route path="login" element={<LoginPage />} />
           {/* Route mặc định nếu không khớp, có thể tạo trang 404 */}
           <Route path="*" element={<HomePage />} />
         </Route>
