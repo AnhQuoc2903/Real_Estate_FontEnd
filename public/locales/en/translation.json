@@ -1,56 +1,63 @@
 {
   "header": {
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "exchange": "Exchange",
-    "news": "News",
-    "recruitment": "Recruitment",
-    "contact": "Contact"
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "services": "Dịch vụ",
+    "exchange": "Trao đổi",
+    "news": "Tin tức",
+    "recruitment": "Tuyển dụng",
+    "contact": "Liên hệ"
   },
+
   "footer": {
-    "company_name": "REAL ESTATE COMPANY NAME",
-    "description": "With many years of experience in the real estate field, we are committed to providing our customers with the best products and services.",
-    "quick_links": "Quick Links",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "contact_us": "Contact Us",
-    "copyright": "All rights reserved"
+    "company_name": "TÊN CÔNG TY BẤT ĐỘNG SẢN",
+    "description": "Với nhiều năm kinh nghiệm trong lĩnh vực bất động sản, chúng tôi cam kết mang đến cho khách hàng những sản phẩm và dịch vụ tốt nhất.",
+    "quick_links": "Liên kết nhanh",
+    "terms": "Điều khoản dịch vụ",
+    "privacy": "Chính sách bảo mật",
+    "contact_us": "Liên hệ với chúng tôi",
+    "copyright": "Đã đăng ký bản quyền"
   },
+
   "language_switcher": {
     "vietnamese": "Tiếng Việt",
-    "english": "English"
+    "english": "Tiếng Anh"
   },
+
   "properties_page": {
-    "title": "Property List",
-    "loading": "Loading data...",
-    "error": "Could not load data from the server.",
-    "price": "Price",
-    "area": "Area",
-    "address": "Address"
+    "title": "Danh sách bất động sản",
+    "loading": "Đang tải dữ liệu...",
+    "error": "Không thể tải dữ liệu từ máy chủ.",
+    "price": "Giá",
+    "area": "Diện tích",
+    "address": "Địa chỉ"
   },
+
   "services": {
-    "title": "Our Services",
-    "subtitle": "We provide comprehensive and professional real estate solutions.",
-    "item1_title": "Expert Consulting",
-    "item1_desc": "Our team of experts is ready to provide the most accurate investment analysis and advice.",
-    "item2_title": "Brokerage Services",
-    "item2_desc": "Assisting clients throughout the entire process of buying, selling, and leasing properties quickly.",
-    "item3_title": "Legal Support",
-    "item3_desc": "Ensuring all transactions are secure, transparent, and in compliance with legal regulations."
+    "title": "Dịch vụ của chúng tôi",
+    "subtitle": "Chúng tôi cung cấp các giải pháp bất động sản toàn diện và chuyên nghiệp.",
+    "item1_title": "Tư vấn chuyên nghiệp",
+    "item1_desc": "Đội ngũ chuyên gia của chúng tôi sẵn sàng cung cấp những phân tích và tư vấn đầu tư chính xác nhất.",
+    "item2_title": "Dịch vụ môi giới",
+    "item2_desc": "Hỗ trợ khách hàng trong toàn bộ quá trình mua bán và cho thuê bất động sản một cách nhanh chóng.",
+    "item3_title": "Hỗ trợ pháp lý",
+    "item3_desc": "Đảm bảo mọi giao dịch được thực hiện an toàn, minh bạch và tuân thủ các quy định pháp luật."
   },
+
   "cta": {
-    "title": "Ready to find your own home?",
-    "subtitle": "Leave your information and our team of specialists will contact you shortly.",
-    "button": "Contact Us Now"
+    "title": "Sẵn sàng tìm ngôi nhà mơ ước của bạn?",
+    "subtitle": "Hãy để lại thông tin và đội ngũ chuyên viên của chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất.",
+    "button": "Liên hệ ngay"
   },
+
   "hero": {
-    "title": "Find Your Dream Home",
-    "subtitle": "The leading real estate platform in Vietnam",
-    "search_placeholder": "Enter location, project...",
-    "search_button": "Search"
+    "title": "Tìm Ngôi Nhà Mơ Ước",
+    "subtitle": "Nền tảng bất động sản hàng đầu tại Việt Nam",
+    "search_placeholder": "Nhập địa điểm, dự án...",
+    "search_button": "Tìm kiếm"
   },
+
   "featured": {
-    "title": "Featured Properties"
+    "title": "Bất động sản nổi bật"
   }
 }

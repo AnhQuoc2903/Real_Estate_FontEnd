@@ -35,9 +35,9 @@ const Header = () => {
             <li>
               <Link to="/tin-tuc">{t("header.news")}</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/tuyen-dung">{t("header.recruitment")}</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/lien-he">{t("header.contact")}</Link>
             </li>

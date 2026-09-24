@@ -29,9 +29,9 @@ const Footer = () => {
             <li>
               <a href="/ve-chung-toi">{t("header.about")}</a>
             </li>
-            <li>
+            {/* <li>
               <a href="/tuyen-dung">{t("header.recruitment")}</a>
-            </li>
+            </li> */}
             <li>
               <a href="/dieu-khoan">{t("footer.terms")}</a>
             </li>

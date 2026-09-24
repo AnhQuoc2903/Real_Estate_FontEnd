@@ -80,12 +80,12 @@ const AdminDashboardPage = () => {
 
   // ... (Phần code cho biểu đồ giữ nguyên)
   const chartData = {
-    labels: ["Bài viết", "Tin tuyển dụng"],
+    labels: ["Bài viết"],
     datasets: [
       {
         label: "Tổng số",
-        data: [stats.posts.total, stats.jobs.total],
-        backgroundColor: ["rgba(54, 162, 235, 0.6)", "rgba(255, 99, 132, 0.6)"],
+        data: [stats.posts.total],
+        backgroundColor: ["rgba(54, 162, 235, 0.6)"],
       },
     ],
   };
@@ -100,10 +100,10 @@ const AdminDashboardPage = () => {
           <h2>Tổng số bài viết</h2>
           <p>{stats.posts.total}</p>
         </div>
-        <div className="stat-card">
+        {/* <div className="stat-card">
           <h2>Tổng số tin tuyển dụng</h2>
           <p>{stats.jobs.total}</p>
-        </div>
+        </div> */}
       </div>
       <div className="chart-container">
         <Bar data={chartData} />
