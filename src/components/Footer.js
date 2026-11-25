@@ -1,59 +1,81 @@
 import React from "react";
 import "./Footer.css";
-import { useTranslation } from "react-i18next"; // 1. Import hook
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation(); // 2. Lấy hàm t
+  const { t } = useTranslation();
 
   return (
     <footer className="app-footer">
       <div className="footer-content container">
+        {/* GIỚI THIỆU */}
         <div className="footer-section about">
-          {/* 3. Sử dụng hàm t() */}
           <h2 className="logo-text">{t("footer.company_name")}</h2>
+
           <p>{t("footer.description")}</p>
+
           <div className="socials">
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
               Facebook
             </a>
+
             <a href="https://zalo.me" target="_blank" rel="noreferrer">
               Zalo
             </a>
-            <a href="mailto:support@yourdomain.com">Email</a>
           </div>
         </div>
+
+        {/* LIÊN KẾT */}
         <div className="footer-section links">
           <h3>{t("footer.quick_links")}</h3>
+
           <ul>
-            {/* <li><a href="/san-giao-dich">{t('header.exchange')}</a></li> */}
+            <li>
+              <a href="/trang-chu">{t("header.home")}</a>
+            </li>
+
             <li>
               <a href="/ve-chung-toi">{t("header.about")}</a>
             </li>
-            {/* <li>
-              <a href="/tuyen-dung">{t("header.recruitment")}</a>
-            </li> */}
+
             <li>
-              <a href="/dieu-khoan">{t("footer.terms")}</a>
+              <a href="/linh-vuc">{t("header.services")}</a>
             </li>
+
             <li>
-              <a href="/chinh-sach">{t("footer.privacy")}</a>
+              <a href="/tin-tuc">{t("header.news")}</a>
+            </li>
+
+            <li>
+              <a href="/lien-he">{t("header.contact")}</a>
             </li>
           </ul>
         </div>
+
+        {/* THÔNG TIN LIÊN HỆ */}
         <div className="footer-section contact-form">
           <h3>{t("footer.contact_us")}</h3>
+
           <span>
-            <i className="fas fa-phone"></i> &nbsp; 123-456-789
+            <strong>Tên công ty:</strong>
+            <br />
+            CÔNG TY CỔ PHẦN ĐẦU TƯ DYNAMIC & DEVELOPMENT
           </span>
+
           <span>
-            <i className="fas fa-envelope"></i> &nbsp; info@tencongty.com
+            <strong>MST:</strong> 0316777466
           </span>
+
           <span>
-            <i className="fas fa-map-marker-alt"></i> &nbsp; 123 Đường ABC, Quận
-            1, TP.HCM
+            <strong>Địa chỉ:</strong>
+            <br />
+            Tầng 2, T8-33 Vinhomes Grand Park, Đường Phước Thiện, Khu phố Phước
+            Thiện, Phường Long Bình, TP Hồ Chí Minh, Việt Nam
           </span>
         </div>
       </div>
+
+      {/* COPYRIGHT */}
       <div className="footer-bottom">
         &copy; {new Date().getFullYear()} {t("footer.company_name")} |{" "}
         {t("footer.copyright")}
